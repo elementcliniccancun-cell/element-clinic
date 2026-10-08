@@ -17,7 +17,7 @@ export const site = {
     { name: "Dra. Daniela Acosta Martínez", cedula: "11678074", role: "Médico cirujano · Directora médica" },
   ],
   // Cal.com: cuando tengas la cuenta, pon aquí tu enlace (ej. "element-clinic/valoracion")
-  calcomLink: "",
+  calcomLink: "element-clinic-jchhdv/valoracion-medica",
   valoracion: { precio: 800, anticipo: 300 },
 };
 
