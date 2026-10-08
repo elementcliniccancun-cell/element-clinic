@@ -16,7 +16,7 @@ export default function Nosotras() {
         <div className="grid gap-12 md:grid-cols-2">
           {site.doctors.map((d) => (
             <article key={d.cedula}>
-              <div className="card-media rounded-2xl bg-[#EFE3D7]" />
+              <div className="card-media rounded-2xl"><div className="media-placeholder"><img src="/media/monogram-rust.png" alt="" aria-hidden /></div></div>
               <h2 className="mt-6 text-3xl">{d.name}</h2>
               <p className="mt-1 text-stone">{d.role} · Céd. Prof. {d.cedula}</p>
             </article>

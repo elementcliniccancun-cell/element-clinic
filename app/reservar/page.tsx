@@ -1,5 +1,6 @@
 import type { Metadata } from "next";
 import Section from "@/components/Section";
+import CalEmbed from "@/components/CalEmbed";
 import { site, waLink } from "@/content/site";
 
 export const metadata: Metadata = { title: "Agendar valoración", description: "Reserva tu valoración médica en Element Clinic Cancún." };
@@ -14,9 +15,7 @@ export default function Reservar() {
       </div>
       <Section>
         {cal ? (
-          <div className="overflow-hidden rounded-2xl border border-hairline bg-white">
-            <iframe src={`https://cal.com/${cal}?embed=true&theme=light`} title="Calendario de citas" className="h-[760px] w-full" loading="lazy" />
-          </div>
+          <CalEmbed calLink={cal} />
         ) : (
           <div className="rounded-2xl bg-cream p-8 md:p-12">
             <p className="font-serif text-3xl">Por ahora agendamos por WhatsApp.</p>

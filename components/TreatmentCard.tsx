@@ -9,9 +9,7 @@ export default function TreatmentCard({ t, large = false }: { t: Treatment; larg
           // eslint-disable-next-line @next/next/no-img-element
           <img src={t.image} alt={t.name} className="transition-transform duration-700 ease-soft group-hover:scale-[1.03]" />
         ) : (
-          <div className="flex h-full w-full items-end bg-gradient-to-b from-cream to-[#EFE3D7] p-6">
-            <span className="font-serif text-[64px] leading-none text-rust/20">{t.name.charAt(0)}</span>
-          </div>
+          <div className="media-placeholder"><img src="/media/monogram-rust.png" alt="" aria-hidden /></div>
         )}
       </div>
       <div className="mt-4 flex items-baseline justify-between gap-4">

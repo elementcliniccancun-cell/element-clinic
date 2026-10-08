@@ -13,7 +13,7 @@ export default function Home() {
   return (
     <>
       {/* Hero */}
-      <section className="relative flex min-h-[100svh] items-end overflow-hidden bg-espresso text-cream">
+      <section className="relative flex min-h-[86svh] md:min-h-[100svh] items-end overflow-hidden bg-espresso text-cream">
         {media.heroVideo ? (
           <video className="absolute inset-0 h-full w-full object-cover" src={media.heroVideo} poster={media.heroPoster || undefined} autoPlay muted loop playsInline aria-hidden />
         ) : media.heroPoster ? (
@@ -99,7 +99,7 @@ export default function Home() {
           <div className="grid grid-cols-2 gap-4">
             {site.doctors.map((d) => (
               <div key={d.cedula}>
-                <div className="card-media rounded-xl bg-[#EFE3D7]" />
+                <div className="card-media rounded-xl"><div className="media-placeholder"><img src="/media/monogram-rust.png" alt="" aria-hidden /></div></div>
                 <p className="mt-3 font-serif text-xl">{d.name}</p>
                 <p className="text-[13px] text-stone">Céd. Prof. {d.cedula}</p>
               </div>

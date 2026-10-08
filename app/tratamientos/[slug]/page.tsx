@@ -46,7 +46,7 @@ export default function TreatmentPage({ params }: { params: { slug: string } }) 
               // eslint-disable-next-line @next/next/no-img-element
               <img src={t.image} alt={t.name} />
             ) : (
-              <div className="flex h-full items-end bg-gradient-to-b from-cream to-[#EFE3D7] p-8"><span className="font-serif text-[120px] leading-none text-rust/15">{t.name.charAt(0)}</span></div>
+              <div className="media-placeholder"><img src="/media/monogram-rust.png" alt="" aria-hidden /></div>
             )}
           </div>
         </div>
@@ -65,9 +65,28 @@ export default function TreatmentPage({ params }: { params: { slug: string } }) 
             <h2 className="text-3xl">Inversión</h2>
             {t.prices ? (
               <dl className="mt-6 divide-y divide-hairline">
-                {t.prices.map((p) => (
-                  <div key={p.label} className="flex items-baseline justify-between gap-4 py-3"><dt>{p.label}</dt><dd className="shrink-0 font-medium">{p.value}</dd></div>
-                ))}
+                {t.prices.map((p) => {
+                  const parts = p.value.split(" · ");
+                  return (
+                    <div key={p.label} className="py-3">
+                      <dt className="text-[15px]">{p.label}</dt>
+                      {p.note && <p className="mt-0.5 text-[12px] text-stone">{p.note}</p>}
+                      <dd className={`mt-1.5 ${parts.length > 1 ? "grid grid-cols-1 gap-x-4 gap-y-1 sm:grid-cols-3" : ""}`}>
+                        {parts.map((v) => {
+                          const m = v.match(/^(desde )?([A-Za-z+ ]+?) (\$[\d,]+.*)$/);
+                          return m ? (
+                            <span key={v} className="flex items-baseline justify-between gap-2 text-[14px] sm:block">
+                              <span className="text-stone">{m[1] ? "desde " : ""}{m[2]}</span>
+                              <span className="font-medium sm:ml-1">{m[3]}</span>
+                            </span>
+                          ) : (
+                            <span key={v} className="block text-[15px] font-medium">{v}</span>
+                          );
+                        })}
+                      </dd>
+                    </div>
+                  );
+                })}
               </dl>
             ) : (
               <p className="mt-6 text-stone">{t.desde ? `Desde ${mxn(t.desde)}.` : "Se cotiza en valoración."}</p>
