@@ -16,7 +16,10 @@ export default function Reservar() {
       <Section>
         <p className="mb-4 font-serif text-2xl">1. Elige tu horario</p>
         {cal ? (
-          <CalEmbed calLink={cal} />
+          <>
+            <CalEmbed calLink={cal} />
+            <p className="mt-3 text-[14px] text-stone">¿No ves el calendario? <a href={`https://cal.com/${cal}`} target="_blank" rel="noopener" className="underline underline-offset-4 hover:text-rust">Ábrelo en cal.com</a>.</p>
+          </>
         ) : (
           <div className="rounded-2xl bg-cream p-8 md:p-12">
             <p className="font-serif text-3xl">Por ahora agendamos por WhatsApp.</p>
