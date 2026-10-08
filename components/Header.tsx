@@ -34,7 +34,7 @@ export default function Header() {
     <header className={`fixed inset-x-0 top-0 z-50 transition-colors duration-300 ease-soft ${solid ? "bg-linen border-b border-hairline" : "bg-night"}`} style={{ height: "var(--header-h)" }}>
       <div className={`mx-auto flex h-full max-w-7xl items-center justify-between px-5 md:px-8 ${tone}`}>
         <Link href="/" aria-label="Element Clinic, inicio" className="flex items-center">
-          <Logo />
+          <Logo tone={solid ? "black" : "cream"} />
         </Link>
 
         {/* Navegación escritorio */}
@@ -44,8 +44,8 @@ export default function Header() {
               Tratamientos
               <svg width="10" height="10" viewBox="0 0 10 10" aria-hidden><path d="M1 3l4 4 4-4" fill="none" stroke="currentColor" strokeWidth="1.4" /></svg>
             </Link>
-            <div className="mega !left-auto !right-[-220px] w-[min(92vw,900px)] pt-2" role="menu">
-              <div className="grid grid-cols-[1.2fr_1fr_1fr_1fr] gap-8 rounded-2xl border border-hairline bg-linen p-8 text-ink shadow-[0_24px_60px_-20px_rgba(28,21,18,.25)]">
+            <div className="mega !left-auto !right-[-280px] w-[min(94vw,1100px)] pt-2" role="menu">
+              <div className="grid grid-cols-[1.3fr_1fr_1fr_1fr_1fr_1fr] gap-8 rounded-2xl border border-hairline bg-linen p-8 text-ink shadow-[0_24px_60px_-20px_rgba(28,21,18,.25)]">
                 <div className="border-r border-hairline pr-8">
                   <p className="font-serif text-2xl leading-tight">Un protocolo diseñado para ti, no un menú.</p>
                   <p className="mt-3 text-sm text-stone">Toda aplicación inicia con una valoración médica de {site.valoracion.precio.toLocaleString("es-MX", { style: "currency", currency: "MXN", maximumFractionDigits: 0 })}, que se abona al tratamiento.</p>

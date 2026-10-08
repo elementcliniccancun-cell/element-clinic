@@ -56,7 +56,7 @@ export default function Home() {
           <h2 className="max-w-[16ch] text-4xl md:text-5xl">Lo que más nos piden, hecho con criterio médico.</h2>
           <Link href="/tratamientos" className="text-[15px] underline underline-offset-4 hover:text-rust">Todos los tratamientos</Link>
         </div>
-        <div className="mt-12 grid gap-x-8 gap-y-12 sm:grid-cols-2 lg:grid-cols-4">
+        <div className="mt-12 grid gap-x-8 gap-y-12 sm:grid-cols-2 lg:grid-cols-3">
           {picks.map((t) => <TreatmentCard key={t.slug} t={t} />)}
         </div>
       </Section>

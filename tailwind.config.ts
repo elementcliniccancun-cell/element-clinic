@@ -5,15 +5,16 @@ const config: Config = {
     extend: {
       colors: {
         espresso: "#1C1512",
-        rust: "#6E4434",
-        clay: "#B8826B",
+        rust: "#8E5F4C",
+        brand: "#A67E6B",
+        clay: "#BFA08F",
         cream: "#F7F1EA",
         linen: "#FBF8F3",
         ink: "#2B221E",
         stone: "#8A7B72",
         hairline: "#E6DCD2",
-        mauve: "#A77B7E",
-        lilac: "#EDE5EC",
+        mauve: "#BE7E73",
+        lilac: "#E6D3CD",
         night: "#0E0C0B",
       },
       fontFamily: {

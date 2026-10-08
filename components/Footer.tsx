@@ -7,9 +7,9 @@ export default function Footer() {
   return (
     <footer className="bg-espresso text-cream">
       <div className="mx-auto max-w-7xl px-5 py-16 md:px-8 md:py-20">
-        <div className="grid gap-12 md:grid-cols-[1.4fr_1fr_1fr_1fr]">
+        <div className="grid gap-12 md:grid-cols-[1.4fr_1fr_1fr_1fr_1fr_1fr]">
           <div>
-            <Logo className="h-7" />
+            <Logo tone="cream" className="h-10" />
             <p className="mt-5 max-w-sm font-serif text-2xl leading-snug text-cream/90">{site.claim}</p>
             <div className="mt-8 flex flex-wrap gap-3">
               <a href={waLink("Hola, me gustaría agendar una valoración en Element Clinic.")} target="_blank" rel="noopener" className="btn btn-light !py-2.5">WhatsApp</a>

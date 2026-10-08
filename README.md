@@ -39,7 +39,7 @@ npm run dev
 - Video del inicio (`content/media.ts` → `heroVideo`).
 - Cuenta de Cal.com conectada a Google Calendar → `content/site.ts` → `calcomLink`.
 - Cuenta de Resend para el formulario.
-- Confirmar lista de precios vigente de Liftage (hay dos versiones en los archivos de la clínica).
+- Precios tomados del Menú Element Clinic (PDF). Fuera del menú por ahora: Hollywood Peel, IPL, Celluma, Body Sculpt (se agregan si se confirman).
 
 ## Fases siguientes
 

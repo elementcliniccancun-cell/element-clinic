@@ -1,9 +1,5 @@
-// Wordmark temporal en texto. Sustituir por el SVG del logo de Element cuando lo tengan:
-// coloca el archivo en /public/media/logo.svg y cambia este componente por <img src="/media/logo.svg" ... />
-export default function Logo({ className = "" }: { className?: string }) {
-  return (
-    <span className={`font-serif text-[22px] font-normal tracking-[0.28em] ${className}`} style={{ lineHeight: 1 }}>
-      ELEMENT CLINIC
-    </span>
-  );
+/* Logo oficial (PNG con fondo transparente en /public/media). tone: "cream" para fondos oscuros, "rust" o "black" para claros. */
+export default function Logo({ tone = "cream", className = "" }: { tone?: "cream" | "rust" | "black"; className?: string }) {
+  // eslint-disable-next-line @next/next/no-img-element
+  return <img src={`/media/logo-${tone}.png`} alt="Element Clinic" width={143} height={50} className={`h-9 w-auto ${className}`} />;
 }

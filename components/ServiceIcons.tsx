@@ -2,12 +2,12 @@ import Link from "next/link";
 
 // Íconos lineales en círculo, al estilo del diseño original de Wix.
 const items = [
-  { href: "/tratamientos/toxina-botulinica", name: "Botox", tag: "Rejuvenece tu expresión", icon: "face" },
-  { href: "/tratamientos#inyectables", name: "Medicina estética", tag: "Realza tu belleza natural", icon: "profile" },
-  { href: "/tratamientos/liftage", name: "Liftage HIFU", tag: "Tensa sin cirugía", icon: "waves" },
+  { href: "/tratamientos/toxina-botulinica", name: "Toxina botulínica", tag: "Rejuvenece tu expresión", icon: "face" },
+  { href: "/tratamientos/acido-hialuronico", name: "Ácido hialurónico", tag: "Realza tu belleza natural", icon: "profile" },
   { href: "/tratamientos/bioestimuladores", name: "Bioestimuladores", tag: "Activa tu colágeno", icon: "cells" },
-  { href: "/tratamientos/celluma-led", name: "Fototerapia LED", tag: "Luz que repara", icon: "light" },
-  { href: "/tratamientos#cabina", name: "Cabina y bienestar", tag: "Cuida y mantiene", icon: "leaf" },
+  { href: "/tratamientos/liftage", name: "Liftage HIFU", tag: "Lifting sin bisturí", icon: "waves" },
+  { href: "/tratamientos/skinboosters", name: "Skinboosters", tag: "Luz desde dentro", icon: "light" },
+  { href: "/tratamientos/iv-therapy", name: "IV Therapy", tag: "Bienestar celular", icon: "drop" },
 ];
 
 function Icon({ kind }: { kind: string }) {
@@ -18,6 +18,7 @@ function Icon({ kind }: { kind: string }) {
     case "waves": return <svg viewBox="0 0 48 48" {...p}><path d="M8 18c4-4 8-4 12 0s8 4 12 0 8-4 8 0" /><path d="M8 26c4-4 8-4 12 0s8 4 12 0 8-4 8 0" /><path d="M8 34c4-4 8-4 12 0s8 4 12 0 8-4 8 0" /></svg>;
     case "cells": return <svg viewBox="0 0 48 48" {...p}><circle cx="18" cy="18" r="6" /><circle cx="31" cy="27" r="7" /><circle cx="18" cy="34" r="4" /><path d="M23 21l4 3M20 30l6-1" /></svg>;
     case "light": return <svg viewBox="0 0 48 48" {...p}><circle cx="24" cy="22" r="8" /><path d="M24 6v4M24 34v4M8 22h4M36 22h4M12 10l3 3M33 31l3 3M12 34l3-3M33 13l3-3" /></svg>;
+    case "drop": return <svg viewBox="0 0 48 48" {...p}><path d="M24 8c6 8 11 14 11 21a11 11 0 0 1-22 0c0-7 5-13 11-21z" /><path d="M18 29a6 6 0 0 0 4 5" /></svg>;
     default: return <svg viewBox="0 0 48 48" {...p}><path d="M12 36c0-14 10-22 26-24-2 16-10 26-24 26" /><path d="M14 34c6-8 12-12 18-16" /></svg>;
   }
 }
