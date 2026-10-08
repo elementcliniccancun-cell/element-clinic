@@ -14,6 +14,13 @@ export default function Reservar() {
         <p className="mt-6 max-w-prose text-lg text-stone">Consulta de {site.valoracion.precio.toLocaleString("es-MX", { style: "currency", currency: "MXN", maximumFractionDigits: 0 })} con una de las doctoras, en clínica o por videollamada. Se abona a tu primer tratamiento. Para reservar el horario se solicita un anticipo de {site.valoracion.anticipo.toLocaleString("es-MX", { style: "currency", currency: "MXN", maximumFractionDigits: 0 })}.</p>
       </div>
       <Section>
+        <div className="mb-10 flex flex-col gap-4 rounded-2xl bg-cream p-6 md:flex-row md:items-center md:justify-between md:p-8">
+          <div>
+            <p className="font-serif text-2xl">Cómo reservar</p>
+            <p className="mt-1 max-w-prose text-stone">1. Elige tu horario en el calendario. 2. Paga el anticipo de {site.valoracion.anticipo.toLocaleString("es-MX", { style: "currency", currency: "MXN", maximumFractionDigits: 0 })} con Mercado Pago (tarjeta, OXXO o SPEI). 3. Recibes confirmación por correo y WhatsApp.</p>
+          </div>
+          <a href={site.anticipoLink} target="_blank" rel="noopener" className="btn btn-primary shrink-0">Pagar anticipo</a>
+        </div>
         {cal ? (
           <CalEmbed calLink={cal} />
         ) : (
