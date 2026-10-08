@@ -13,8 +13,8 @@ export const site = {
   hours: "Lunes a sábado, 10:00 a 19:00",
   license: "Licencia de funcionamiento 58220",
   doctors: [
-    { name: "Dra. Brenda Serrano Dávila", cedula: "11813318", role: "Médico cirujano · Directora médica", photo: "/media/brenda.jpg" },
-    { name: "Dra. Daniela Acosta Martínez", cedula: "11678074", role: "Médico cirujano · Directora médica", photo: "/media/daniela.jpg" },
+    { name: "Dra. Brenda Serrano Dávila", cedula: "11813318", role: "Médico cirujano · Directora médica", photo: "/media/brenda.png" },
+    { name: "Dra. Daniela Acosta Martínez", cedula: "11678074", role: "Médico cirujano · Directora médica", photo: "/media/daniela.png" },
   ],
   // Cal.com: cuando tengas la cuenta, pon aquí tu enlace (ej. "element-clinic/valoracion")
   calcomLink: "element-clinic-jchhdv/valoracion-medica",

@@ -16,7 +16,7 @@ export default function Nosotras() {
         <div className="grid gap-12 md:grid-cols-2 md:gap-16">
           {site.doctors.map((d) => (
             <article key={d.cedula}>
-              <div className="card-media rounded-2xl">
+              <div className="card-media cutout rounded-2xl">
                 {/* eslint-disable-next-line @next/next/no-img-element */}
                 <img src={d.photo} alt={d.name} />
               </div>

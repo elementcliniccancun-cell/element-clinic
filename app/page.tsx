@@ -99,7 +99,7 @@ export default function Home() {
           <div className="grid grid-cols-2 gap-4">
             {site.doctors.map((d) => (
               <div key={d.cedula}>
-                <div className="card-media rounded-xl">
+                <div className="card-media cutout rounded-xl">
                   {/* eslint-disable-next-line @next/next/no-img-element */}
                   <img src={d.photo} alt={d.name} />
                 </div>

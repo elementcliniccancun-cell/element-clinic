@@ -41,6 +41,8 @@ h2 { line-height: 1.08; }
 /* Tarjetas con imagen */
 .card-media { @apply relative overflow-hidden bg-cream; aspect-ratio: 4 / 5; }
 .card-media > img, .card-media > video { @apply h-full w-full object-cover; }
+.card-media.cutout { @apply bg-lilac; }
+.card-media.cutout > img { @apply object-contain object-bottom; }
 .media-placeholder img { height: auto; }
 
 /* Placeholder de imagen: monograma de marca al 10% */
