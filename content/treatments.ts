@@ -24,7 +24,7 @@ export type Treatment = {
 export const categories: { id: Category; name: string; blurb: string }[] = [
   { id: "inyectables", name: "Inyectables", blurb: "Toxina botulínica, ácido hialurónico, bioestimuladores y lipoenzimas aplicados por médicos cirujanos." },
   { id: "piel", name: "Calidad de piel", blurb: "Skinboosters y microneedling con activos de grado médico para hidratar, unificar y regenerar." },
-  { id: "tecnologia", name: "Tecnología", blurb: "Liftage HIFU: lifting sin bisturí con ultrasonido focalizado de alta precisión." },
+  { id: "tecnologia", name: "Tecnología", blurb: "Liftage HIFU y fototerapia Celluma LED: tecnología certificada sin agujas ni incapacidad." },
   { id: "cabina", name: "Faciales y masajes", blurb: "Faciales médicos y masajes terapéuticos para completar y mantener cada protocolo." },
   { id: "wellness", name: "IV Therapy y suplementación", blurb: "Infusiones médicas y fórmulas orales que potencian los resultados desde el interior." },
 ];
@@ -227,6 +227,33 @@ export const treatments: Treatment[] = [
       { label: "Cuello", value: "desde $6,100" },
       { label: "Papada", value: "desde $4,400" },
       { label: "Escote", value: "desde $4,900" },
+    ],
+  },
+
+  {
+    slug: "celluma-led",
+    name: "Fototerapia Celluma LED",
+    short: "Luz médica para piel, cabello y dolor",
+    category: "tecnologia",
+    desde: 900,
+    image: "/media/celluma.jpg",
+    summary: "Fotobiomodulación con longitudes de onda específicas que actúan en la actividad mitocondrial para optimizar la energía celular y la respuesta del tejido.",
+    description: [
+      "No todas las terapias de luz son iguales. Celluma PRO emite luz azul, roja e infrarroja en longitudes de onda que las células absorben para producir más energía: reduce inflamación, acelera la reparación y estimula colágeno.",
+      "Sin calor, sin dolor y seguro en embarazo y lactancia. Se usa solo, en protocolos de varias sesiones, o como complemento de casi todos nuestros tratamientos.",
+    ],
+    forWhom: ["Acné activo", "Líneas finas y pérdida de firmeza", "Rosácea y piel sensible", "Caída de cabello", "Dolor muscular y articular"],
+    details: [
+      { label: "Duración", value: "30 min" },
+      { label: "Sesiones", value: "2 a 3 por semana según protocolo" },
+      { label: "Certificación", value: "FDA y COFEPRIS Clase II" },
+    ],
+    prices: [
+      { label: "Sesión suelta", value: "$900" },
+      { label: "Protocolo dolor", value: "$5,800" },
+      { label: "Protocolo rosácea", value: "$6,200" },
+      { label: "Protocolo antiedad", value: "$6,800" },
+      { label: "Protocolo acné o capilar", value: "$7,200" },
     ],
   },
 
