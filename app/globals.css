@@ -1,0 +1,54 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+:root {
+  --header-h: 76px;
+}
+
+html { scroll-behavior: smooth; }
+@media (prefers-reduced-motion: reduce) {
+  html { scroll-behavior: auto; }
+  *, *::before, *::after { animation-duration: 0.01ms !important; transition-duration: 0.01ms !important; }
+}
+
+body {
+  @apply bg-linen text-ink font-sans antialiased;
+  font-feature-settings: "kern" 1, "liga" 1;
+}
+
+h1, h2, h3, .serif { @apply font-serif font-normal tracking-tight; }
+h1 { line-height: 1.02; }
+h2 { line-height: 1.08; }
+
+/* Botones */
+.btn { @apply inline-flex items-center justify-center gap-2 rounded-full px-6 py-3 text-[15px] font-medium transition-colors duration-200 ease-soft focus:outline-none focus-visible:ring-2 focus-visible:ring-clay focus-visible:ring-offset-2; }
+.btn-primary { @apply bg-rust text-cream hover:bg-[#5A3729]; }
+.btn-light { @apply bg-cream text-espresso hover:bg-white; }
+.btn-ghost { @apply border border-current text-current hover:bg-espresso/5; }
+.btn-ghost-light { @apply border border-cream/50 text-cream hover:border-cream hover:bg-cream/10; }
+
+/* Hero */
+.hero-veil { background: linear-gradient(180deg, rgba(28,21,18,.35) 0%, rgba(28,21,18,.15) 40%, rgba(28,21,18,.75) 100%); }
+
+/* Reveal del hero: una sola secuencia al cargar */
+@keyframes rise { from { opacity: 0; transform: translateY(14px); } to { opacity: 1; transform: translateY(0); } }
+.rise { animation: rise .9s cubic-bezier(.22,.61,.36,1) both; }
+.rise-2 { animation-delay: .18s; }
+.rise-3 { animation-delay: .36s; }
+
+/* Tarjetas con imagen */
+.card-media { @apply relative overflow-hidden bg-cream; aspect-ratio: 4 / 5; }
+.card-media img, .card-media video { @apply h-full w-full object-cover; }
+
+/* Hairline */
+.rule { @apply border-t border-hairline; }
+
+/* Mega menú */
+.mega { @apply invisible absolute left-0 right-0 top-full translate-y-1 opacity-0 transition-all duration-200 ease-soft; }
+.group\/nav:hover .mega, .group\/nav:focus-within .mega { @apply visible translate-y-0 opacity-100; }
+
+/* Marquee discreto para la franja de confianza */
+@keyframes slide { to { transform: translateX(-50%); } }
+.marquee { animation: slide 40s linear infinite; }
+@media (prefers-reduced-motion: reduce) { .marquee { animation: none; } }
