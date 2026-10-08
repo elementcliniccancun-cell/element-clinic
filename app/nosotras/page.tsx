@@ -13,14 +13,20 @@ export default function Nosotras() {
         <p className="mt-8 max-w-prose text-lg leading-relaxed">Element Medicina de Precisión abrió en Cancún con una idea sencilla: que cada aplicación la decida y la haga un médico, con una valoración real antes y un seguimiento real después. Sin menús de promociones, sin cabinas sin supervisión.</p>
       </div>
       <Section>
-        <div className="grid gap-12 md:grid-cols-2">
-          {site.doctors.map((d) => (
-            <article key={d.cedula}>
-              <div className="card-media rounded-2xl"><div className="media-placeholder"><img src="/media/monogram-rust.png" alt="" aria-hidden /></div></div>
-              <h2 className="mt-6 text-3xl">{d.name}</h2>
-              <p className="mt-1 text-stone">{d.role} · Céd. Prof. {d.cedula}</p>
-            </article>
-          ))}
+        <div className="grid gap-12 md:grid-cols-[1fr_1.1fr] md:items-center md:gap-20">
+          <div className="card-media rounded-2xl">
+            {/* eslint-disable-next-line @next/next/no-img-element */}
+            <img src="/media/doctoras.jpg" alt="Dra. Brenda Serrano Dávila y Dra. Daniela Acosta Martínez" />
+          </div>
+          <div className="space-y-10">
+            {site.doctors.map((d) => (
+              <article key={d.cedula} className="border-l border-clay pl-6">
+                <h2 className="text-3xl">{d.name}</h2>
+                <p className="mt-1 text-stone">{d.role}</p>
+                <p className="text-[13px] text-stone">Cédula profesional {d.cedula}</p>
+              </article>
+            ))}
+          </div>
         </div>
       </Section>
       <Section dark>
