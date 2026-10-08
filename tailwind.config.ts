@@ -12,6 +12,9 @@ const config: Config = {
         ink: "#2B221E",
         stone: "#8A7B72",
         hairline: "#E6DCD2",
+        mauve: "#A77B7E",
+        lilac: "#EDE5EC",
+        night: "#0E0C0B",
       },
       fontFamily: {
         serif: ["var(--font-garamond)", "Georgia", "serif"],

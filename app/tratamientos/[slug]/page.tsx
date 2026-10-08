@@ -22,7 +22,7 @@ export default function TreatmentPage({ params }: { params: { slug: string } }) 
 
   return (
     <>
-      <div className="mx-auto max-w-7xl px-5 pt-36 md:px-8 md:pt-44">
+      <div className="mx-auto max-w-7xl px-5 pt-32 md:px-8 md:pt-40">
         <p className="text-[14px] text-stone"><Link href="/tratamientos" className="hover:text-rust">Tratamientos</Link> / <Link href={`/tratamientos#${cat.id}`} className="hover:text-rust">{cat.name}</Link></p>
         <div className="mt-6 grid gap-10 md:grid-cols-[1.1fr_1fr] md:gap-16">
           <div>

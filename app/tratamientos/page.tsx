@@ -8,7 +8,7 @@ export const metadata: Metadata = { title: "Tratamientos estéticos", descriptio
 export default function Tratamientos() {
   return (
     <>
-      <div className="mx-auto max-w-7xl px-5 pb-6 pt-36 md:px-8 md:pt-44">
+      <div className="mx-auto max-w-7xl px-5 pb-6 pt-32 md:px-8 md:pt-40">
         <h1 className="max-w-[16ch] text-5xl md:text-7xl">Tratamientos estéticos</h1>
         <p className="mt-6 max-w-prose text-lg text-stone">Precios al público en pesos mexicanos, con IVA. Todo tratamiento inicia con una valoración médica que se abona a la primera aplicación.</p>
         <nav className="mt-8 flex flex-wrap gap-2" aria-label="Categorías">

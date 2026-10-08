@@ -8,7 +8,7 @@ export const metadata: Metadata = { title: "Nosotras", description: "Las doctora
 export default function Nosotras() {
   return (
     <>
-      <div className="mx-auto max-w-7xl px-5 pt-36 md:px-8 md:pt-44">
+      <div className="mx-auto max-w-7xl px-5 pt-32 md:px-8 md:pt-40">
         <h1 className="max-w-[18ch] text-5xl md:text-7xl">La medicina estética debe ser medicina primero.</h1>
         <p className="mt-8 max-w-prose text-lg leading-relaxed">Element Medicina de Precisión abrió en Cancún con una idea sencilla: que cada aplicación la decida y la haga un médico, con una valoración real antes y un seguimiento real después. Sin menús de promociones, sin cabinas sin supervisión.</p>
       </div>

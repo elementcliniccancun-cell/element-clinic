@@ -8,7 +8,7 @@ export const metadata: Metadata = { title: "Contacto", description: "Escríbenos
 export default function Contacto() {
   return (
     <>
-      <div className="mx-auto max-w-7xl px-5 pt-36 md:px-8 md:pt-44">
+      <div className="mx-auto max-w-7xl px-5 pt-32 md:px-8 md:pt-40">
         <h1 className="text-5xl md:text-7xl">Hablemos.</h1>
       </div>
       <Section>

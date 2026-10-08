@@ -3,6 +3,7 @@ import Section from "@/components/Section";
 import TreatmentCard from "@/components/TreatmentCard";
 import Testimonials from "@/components/Testimonials";
 import Videos from "@/components/Videos";
+import ServiceIcons from "@/components/ServiceIcons";
 import { site, waLink } from "@/content/site";
 import { media } from "@/content/media";
 import { categories, byCategory, featured } from "@/content/treatments";
@@ -19,7 +20,7 @@ export default function Home() {
           // eslint-disable-next-line @next/next/no-img-element
           <img src={media.heroPoster} alt="" className="absolute inset-0 h-full w-full object-cover" aria-hidden />
         ) : (
-          <div className="absolute inset-0 bg-[radial-gradient(120%_80%_at_80%_10%,#3B2A23_0%,#1C1512_60%)]" aria-hidden />
+          <div className="absolute inset-0 bg-[radial-gradient(110%_90%_at_75%_20%,#8C6A5A_0%,#5A4035_45%,#2A1E19_100%)]" aria-hidden />
         )}
         <div className="hero-veil absolute inset-0" aria-hidden />
         <div className="relative mx-auto w-full max-w-7xl px-5 pb-16 pt-40 md:px-8 md:pb-24">
@@ -46,6 +47,8 @@ export default function Home() {
           ))}
         </div>
       </div>
+
+      <ServiceIcons />
 
       {/* Destacados */}
       <Section>
@@ -79,28 +82,6 @@ export default function Home() {
               </li>
             ))}
           </ol>
-        </div>
-      </Section>
-
-      {/* Categorías */}
-      <Section>
-        <div className="grid gap-12 md:grid-cols-3">
-          {categories.map((c) => (
-            <div key={c.id}>
-              <h2 className="text-3xl">{c.name}</h2>
-              <p className="mt-3 text-stone">{c.blurb}</p>
-              <ul className="mt-6 divide-y divide-hairline border-y border-hairline">
-                {byCategory(c.id).map((t) => (
-                  <li key={t.slug}>
-                    <Link href={`/tratamientos/${t.slug}`} className="flex items-baseline justify-between py-3 hover:text-rust">
-                      <span>{t.name}</span>
-                      <span className="text-[13px] text-stone">{t.desde ? `desde $${t.desde.toLocaleString("es-MX")}` : "Cotización"}</span>
-                    </Link>
-                  </li>
-                ))}
-              </ul>
-            </div>
-          ))}
         </div>
       </Section>
 

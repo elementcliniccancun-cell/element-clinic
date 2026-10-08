@@ -8,7 +8,7 @@ export default function Reservar() {
   const cal = site.calcomLink;
   return (
     <>
-      <div className="mx-auto max-w-7xl px-5 pt-36 md:px-8 md:pt-44">
+      <div className="mx-auto max-w-7xl px-5 pt-32 md:px-8 md:pt-40">
         <h1 className="max-w-[14ch] text-5xl md:text-7xl">Agenda tu valoración.</h1>
         <p className="mt-6 max-w-prose text-lg text-stone">Consulta de {site.valoracion.precio.toLocaleString("es-MX", { style: "currency", currency: "MXN", maximumFractionDigits: 0 })} con una de las doctoras, en clínica o por videollamada. Se abona a tu primer tratamiento. Para reservar el horario se solicita un anticipo de {site.valoracion.anticipo.toLocaleString("es-MX", { style: "currency", currency: "MXN", maximumFractionDigits: 0 })}.</p>
       </div>

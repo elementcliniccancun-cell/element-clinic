@@ -16,7 +16,7 @@ export default function Header() {
   const [open, setOpen] = useState(false);
   const [mobileTreat, setMobileTreat] = useState(true);
   const pathname = usePathname();
-  const onDark = pathname === "/"; // el inicio tiene hero oscuro
+  const onDark = true; // barra negra en todo el sitio, como el diseño original
 
   useEffect(() => {
     const f = () => setScrolled(window.scrollY > 24);
@@ -27,14 +27,14 @@ export default function Header() {
   useEffect(() => { setOpen(false); }, [pathname]);
   useEffect(() => { document.body.style.overflow = open ? "hidden" : ""; }, [open]);
 
-  const solid = scrolled || !onDark || open;
+  const solid = open;
   const tone = solid ? "text-ink" : "text-cream";
 
   return (
-    <header className={`fixed inset-x-0 top-0 z-50 transition-colors duration-300 ease-soft ${solid ? "bg-linen/90 backdrop-blur border-b border-hairline" : "bg-transparent"}`} style={{ height: "var(--header-h)" }}>
+    <header className={`fixed inset-x-0 top-0 z-50 transition-colors duration-300 ease-soft ${solid ? "bg-linen border-b border-hairline" : "bg-night"}`} style={{ height: "var(--header-h)" }}>
       <div className={`mx-auto flex h-full max-w-7xl items-center justify-between px-5 md:px-8 ${tone}`}>
         <Link href="/" aria-label="Element Clinic, inicio" className="flex items-center">
-          <Logo className="h-7 w-auto" />
+          <Logo />
         </Link>
 
         {/* Navegación escritorio */}
