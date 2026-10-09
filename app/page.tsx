@@ -96,17 +96,11 @@ export default function Home() {
             <p className="mt-6 max-w-prose text-lg leading-relaxed">Element nació de la convicción de que la medicina estética debe ser medicina primero. Cada protocolo lo diseñan y aplican la Dra. Brenda Serrano y la Dra. Daniela Acosta, médicos cirujanos con cédula profesional.</p>
             <Link href="/nosotras" className="btn btn-ghost mt-8">Conocer a las doctoras</Link>
           </div>
-          <div className="grid grid-cols-2 gap-4">
-            {site.doctors.map((d) => (
-              <div key={d.cedula}>
-                <div className="card-media cutout rounded-xl">
-                  {/* eslint-disable-next-line @next/next/no-img-element */}
-                  <img src={d.photo} alt={d.name} />
-                </div>
-                <p className="mt-3 font-serif text-xl">{d.name}</p>
-                <p className="text-[13px] text-stone">Céd. Prof. {d.cedula}</p>
-              </div>
-            ))}
+          <div>
+            <div className="card-media rounded-2xl">
+              {/* eslint-disable-next-line @next/next/no-img-element */}
+              <img src="/media/doctoras.jpg" alt="Dra. Daniela Acosta Martínez y Dra. Brenda Serrano Dávila en Element Clinic" />
+            </div>
           </div>
         </div>
       </Section>
